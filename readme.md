@@ -75,7 +75,7 @@ Be sure to replace `Button` references with `ButtonWithDisabledOption`.
     }
 
     // private System.Windows.Forms.Button button1;
-    private just_buttons.ButtonWithDisableOption buttonWithDisableOption;
+    private button_with_disabled_option.ButtonWithDisableOption buttonWithDisableOption;
 
 ***
 **TEST**
