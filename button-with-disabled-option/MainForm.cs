@@ -39,7 +39,6 @@ namespace button_with_disabled_option
         }
         private void buttonWithDisableOption_DisabledClick(object sender, EventArgs e)
         {
-            var enabled = buttonWithDisableOption.Enabled ? "Enabled" : "Disabled";
             // Title bar
             Text = $"Button Click {_tstcount++} (Disabled)";
             MessageBox.Show("Button is unclickable");
@@ -48,7 +47,7 @@ namespace button_with_disabled_option
     }
     class ButtonWithDisableOption : Button
     {
-        bool _enabled = false;
+        bool _enabled = true;
         public new bool Enabled
         {
             get => _enabled;
@@ -68,11 +67,13 @@ namespace button_with_disabled_option
             {
                 ForeColor = SystemColors.ControlText;
                 BackColor = SystemColors.Control;
+                FlatStyle = FlatStyle.Standard;
             }
             else
             {
                 ForeColor = Color.FromArgb(191, 191, 191);
                 BackColor = Color.FromArgb(204, 204, 204);
+                FlatStyle = FlatStyle.Flat;
             }
         }
         protected override void OnClick(EventArgs e)
