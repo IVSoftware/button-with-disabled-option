@@ -20,7 +20,7 @@ Here is a guideline example for a custom `Button` that:
 
     class ButtonWithDisableOption : Button
     {
-        bool _enabled = false;
+        bool _enabled = true;
         public new bool Enabled
         {
             get => _enabled;
@@ -40,11 +40,13 @@ Here is a guideline example for a custom `Button` that:
             {
                 ForeColor = SystemColors.ControlText;
                 BackColor = SystemColors.Control;
+                FlatStyle = FlatStyle.Standard;
             }
             else
             {
                 ForeColor = Color.FromArgb(191, 191, 191);
                 BackColor = Color.FromArgb(204, 204, 204);
+                FlatStyle = FlatStyle.Flat;
             }
         }
         protected override void OnClick(EventArgs e)
